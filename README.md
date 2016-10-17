@@ -1,6 +1,6 @@
 # `case` Statements
 
-##Objectives:
+## Objectives:
 
 1. Distinguish a `case` statement from other patterns of flow control.
 2. Identify when to use a `case` statement.
@@ -99,16 +99,6 @@ case greeting
 end
 ```
 
-##### Advanced: How does it work?
-
-Under the hood, `case` statements actually evaluate their `when` conditionals by implicitly using the "case equality operator"; the case equality operator is otherwise represented by `===` ("threequals") sign. While `case` can be used to replace the comparison operator in a situation like the first example in this reading, it's doing something slightly different. [Read more about === here.](http://stackoverflow.com/questions/3422223/vs-in-ruby?lq=1)
-
-Similar to the comparison operations above, the `when` statement evaluates to a boolean value by using the `case` value at the start of the `case` statement and the value following the `when` keyword. If this `when` condition evaluates to `false`, then the indented code beneath that condition is skipped; if it evaluates to `true`, then the indented code beneath it is executed.
-
-In the above case, Ruby compares the `case` value to the two `when` conditions; `"friendly_greeting" === "unfriendly_greeting"` is `false`, so `puts "What do you want!?"` is *not* run; however, `"friendly_greeting" === "friendly_greeting"` is `true`, so `puts "Hi! How are you?"` *is* run.
-
-It is not necessary at this point to understand the distinction between the comparative operator (`==`) and the case comparison operator (`===`). Just realize that there *is* a distinction, even though the usages relevant to you right now will be similar.
-
 ## Example 1: Weather
 
 In this example, we set the `current_weather` to `"raining"`. Next, we use `when` statements to describe a list of possible matches. Since `current_weather === "raining"` we'd expect this code to put `"grab an umbrella"`.
@@ -147,9 +137,3 @@ case grade
     puts "You're just making that up!"
 end
 ```
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/case-statements-readme' title='case Statements'>case Statements</a> on Learn.co and start learning to code for free.</p>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/case-statements-readme'>Case Statements</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/case-statements-readme'>About Ruby Case Statements</a> on Learn.co and start learning to code for free.</p>
